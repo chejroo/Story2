@@ -1,0 +1,3 @@
+function max() {
+    alert('test');
+}

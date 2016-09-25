@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Curatius - baza rozwozu</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<!--<link type="text/css" rel="stylesheet" href="css/materialize/css/materialize.min.css"  media="screen,projection"/>-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	<!--<script src="css/jquery-3.1.0.min.js"></script>-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="content">
+		<!--<nav>-->
+			<!--<div class="navbar-fixed teal lighten-2">-->
+				<!--<a href="#" class="brand-logo">Curatius</a>-->
+				<!--<ul id="nav-mobile" class="right hide-on-med-and-down">-->
+					<!--<li><a href="sass.html">Apteki</a></li>-->
+				<!--</ul>-->
+			<!--</div>-->
+		<!--</nav>-->
+	<div class="row header teal accent-4 white-text">
+		<p>Curatius - dowóz leków</p>
+		<!--<img src="cos.png"></img>-->
+		</div>
+	<div id="listaAptekk">
+		<a class="btn-floating btn-medium waves-effect waves-light red"><i class="material-icons" id="back_button">arrow_back</i></a>
+		<thead>
+		<table class="orange centered">
+		<tr>
+			<th>Adres</th>
+			<th>Numer</th>
+			<th>Inne</th>
+			<th class="right aligned">Opcje</th>
+		</tr>
+		</thead>
+			</table>
+	</div>
+
+		<div class="row option">
+			<div class="col s4">
+				<div class="card-panel teal" id="klienci_menu">
+          <span class="white-text">
+				<i class="material-icons large white-text">group</i>
+				<p>Klienci</p>
+          </span>
+				</div>
+			</div>
+			<div class="col s4">
+				<div class="card-panel teal">
+          <span class="white-text">
+			  <a href="index.html" class="white-text">
+				  				<i class="material-icons large white-text">account_circle</i>
+				<p>Zaloguj</p>
+			  </a>
+          </span>
+				</div>
+			</div>
+			<div class="col s4">
+				<div class="card-panel teal" id="nowyMenu">
+          <span class="white-text">
+				  				<i class="material-icons large white-text">person_add</i>
+				<p>Dodaj klienta</p>
+          </span>
+				</div>
+			</div>
+		</div>
+	<div class="nowyKlient">
+		<form class="col s12">
+			<div class="row">
+				<div class="input-field col s4">
+					<i class="material-icons prefix">account_circle</i>
+					<input id="icon_prefix" type="text" class="validate">
+					<label for="icon_prefix">Nazwa</label>
+				</div>
+				<div class="input-field col s4">
+					<i class="material-icons prefix">phone</i>
+					<input id="icon_telephone" type="tel" class="validate">
+					<label for="icon_telephone">Telefon</label>
+				</div>
+				<div class="input-field col s4">
+					<input type="checkbox" id="test5" />
+					<label for="test5">Usługa premium</label>
+				</div>
+			</div>
+		</form>
+	</div>
+<script src="main.js"></script>
+</body>
