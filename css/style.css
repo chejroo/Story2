@@ -54,12 +54,10 @@
 body{
     background-color: #f5f7f8;
 }
-
 .logo{
     text-align: center;
     font-size: 40px;
-    background-color: black;
-    color: white;
+    margin-top: 5%;
     min-height: 600px;
 }
 
@@ -71,5 +69,78 @@ body{
 
 .sendBtn{
     margin-left: 20%;
-    margin-top: 1%;
+}
+
+.create{
+    min-width: 100%;
+    font-size: 50px;
+    min-height: 70px;
+}
+
+
+/*----------NEW STORY-------------- */
+
+.newStory{
+}
+.cc{
+    /*background-image: url("/5.jpg");*/
+    /*background-repeat: repeat-x;*/
+    /*background-color: #f5f7f8;*/
+}
+
+.cc image{
+    width: 100%;
+}
+
+img.q2{
+    width: 100%;
+    height: auto;
+}
+
+
+.storyContent{
+    min-height: 500px;
+    font-size: 30px;
+    padding: 10px;
+    font-family: Aparajita;
+}
+
+.headerStory{
+    font-family: "DejaVu Serif Condensed";
+    font-size: larger;
+    margin-top: 5%;
+    letter-spacing: 2px;
+    margin-top: 10%;
+}
+
+.q5{
+    padding-right: 10%;
+    text-align: right;
+    font-style: italic;
+    margin-top: 4%;
+
+}
+
+.author{
+    color: #4a148c;
+}
+
+.authorName{
+font-size: large;
+}
+
+.w1{
+    margin-top: 10%;
+}
+
+.w2{
+    display: none;
+}
+
+.b1{
+    min-height: 60px;
+}
+
+.f1{
+    margin-top: 3%;
 }
