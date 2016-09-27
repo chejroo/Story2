@@ -27,11 +27,15 @@
         </div>
     </div>
     <div class="col s12 card w2">
-        <p class="authorName center">Every story has to have author.</p>
-        <form class="col s12" action="story.php" method="get">
+        <p class="authorName center">Every story has to have author and title.</p>
+        <form class="col s12" action="newStory.php" method="post">
             <div class="input-field col s9 ">
                 <input placeholder="" id="authorName" type="text" name="author" class="validate">
                 <label for="first_name">Your Name</label>
+            </div>
+            <div class="input-field col s9 ">
+                <input placeholder="New story" id="titleName" type="text" name="title" class="validate">
+                <label for="first_name">Title</label>
             </div>
             <button class="btn cyan darken-3 waves-effect waves-light btn-large b1 " id="submitt" type="submit" name="action">
                 <input type="submit" id="submit" value="Let's start">

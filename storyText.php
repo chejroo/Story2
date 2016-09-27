@@ -1,23 +1,23 @@
 <?php
 include "dbConnect.php";
+$id2 = substr($_SERVER['QUERY_STRING'] , 3);
 
-// Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
+if(isset($_POST['url'])){
+    $url = $_POST['url'];
+    $r = strstr($url,"=");
+    $id = substr($r,1);
+}else{
+    $id = substr($_SERVER['QUERY_STRING'] , 3);
+}
 
-$sql = "SELECT * FROM story";
+if($stmt = $conn->prepare("SELECT * FROM story WHERE id = ?")){
+    $stmt ->bind_param("i", $id);
+    $stmt ->execute();
+    $stmt ->bind_result($idR,$story);
+    $stmt->fetch();
+    $stmt ->close();
 
-$result = $conn->query($sql);
+}echo $story;
 
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo $row['story'];
-                    }
-                } else {
-                    echo "0 results";
-                }
 $conn->close();
 ?>

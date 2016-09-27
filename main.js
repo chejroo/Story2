@@ -33,10 +33,11 @@ $('document').ready(function () {
     })
 
     $('.sendBtn').click(function () {
+        var url = window.location.href;
         var word = $('#word').val();
-        $.post( "new.php", { word: word})
+        $.post( "new.php", { word: word, url : url})
             .done(function( data ) {
-                $('.q4').load("storyText.php");
+                $('.q4').load("storyText.php",{ url: url });
             });
     })
 })

@@ -1,9 +1,3 @@
-<?php
-// Start the session
-session_start();
-if(isset($_GET['author']))
-$_SESSION["name"] = $_GET['author'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +17,12 @@ $_SESSION["name"] = $_GET['author'];
 <body class="cc">
 <img  class="q2" src="5.jpg">
 <div class="container newStory">
+
     <div class="col s12 card storyContent">
         <div class="q3">
-            <p>The story begins here ... </p>
+            <p>The story of <?php if(isset($_POST['title'])){
+                echo $_SESSION["title"];} ?>
+                begins here ... </p>
             <hr>
         </div>
         <div class="q4">
@@ -34,15 +31,11 @@ $_SESSION["name"] = $_GET['author'];
         <div class="q5">
             <p>Written by: </p>
             <ul>
-                <li>Author 1</li>
-                <li>Author 2</li>
-                <li>Author 3</li>
                 <?php if (isset($_SESSION["name"])) echo "<li class='author'>".$_SESSION["name"]."</li>"; ?>
             </ul>
         </div>
     </div>
     <div class="input-field col s6">
-<!--        <form class="col s12" action="new.php" method="post" id = "form">-->
             <div class="row f1">
                 <div class="input-field col s7">
                     <input id="word" name="word" type="text" length="10">
@@ -51,8 +44,7 @@ $_SESSION["name"] = $_GET['author'];
                 <button class="btn-large waves-effect waves-light sendBtn" id="submit" name="action">Send
                     <i class="material-icons right">send</i>
                 </button>
-<!--        </form>-->
-    </div>
+            </div>
     </div>
 </div>
 <script src="main.js"></script>
