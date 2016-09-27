@@ -3,6 +3,8 @@ $('document').ready(function () {
         $('#submit').attr("disabled", true);
         $('.b1').addClass('disabled');
         $('.b1').attr("disabled", true);
+        // id = 3;
+        // $('.q5').load("showAuthors.php", {id_story : id });
 
     $('#word').keyup(function () {
         var value = $(this).val();

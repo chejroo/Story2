@@ -17,21 +17,20 @@
 <body class="cc">
 <img  class="q2" src="5.jpg">
 <div class="container newStory">
-
     <div class="col s12 card storyContent">
         <div class="q3">
-            <p>The story of <?php if(isset($_POST['title'])){
-                echo $_SESSION["title"];} ?>
-                begins here ... </p>
+            <p>The story begins here ... </p>
             <hr>
         </div>
-        <div class="q4">
-            <p><?php include "storyText.php"; ?> </p>
+        <div class="q35" id="q35">
+
+        </div>
+        <div class="q4" id="q4">
+
         </div>
         <div class="q5">
-            <p>Written by: </p>
             <ul>
-                <?php if (isset($_SESSION["name"])) echo "<li class='author'>".$_SESSION["name"]."</li>"; ?>
+
             </ul>
         </div>
     </div>
@@ -48,5 +47,6 @@
     </div>
 </div>
 <script src="main.js"></script>
+<script src="story.js"></script>
 </body>
 </html>
